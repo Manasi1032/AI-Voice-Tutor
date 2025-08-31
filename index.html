@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Voice Tutor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI VOICE TUTOR</h1>
+</header>
+
+<main>
+  <p>Enter text below, or upload a file to extract its text:</p>
+  
+  <!-- This is the button for your PDF and Image feature -->
+  <label for="fileUpload" class="file-label">Upload Image or PDF</label>
+  <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf" style="display:none;">
+  <div id="fileStatus" style="margin: 10px 0; color: #555;"></div>
+
+  <!-- This is for your Text feature -->
+  <form>
+    <label for="textInput">Your Text:</label>
+    <textarea id="textInput" name="textInput" rows="5" cols="50" placeholder="Type here, or text from a file will appear here..."></textarea>
+    <br><br>
+
+    <button type="button" id="ttsBtn">Convert to Speech</button>
+  </form>
+
+  <div id="aiAnswer" style="margin: 20px 0; font-size: 1.2rem;"></div>
+
+  <div id="downloadWrap" style="display:none; margin-top:20px;">
+    <audio id="player" controls></audio>
+    <br>
+    <a id="downloadLink" href="#" download="speech.mp3">Download Audio</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 AI Voice Tutor. All rights reserved.
+</footer>
+
+<!-- NEW: PDF Library Scripts -->
+<script src="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.js"></script>
+<script src="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.js"></script>
+
+<!-- Your Main Logic -->
+<script src="script.js"></script>
+
+<!-- Image Library Script -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@v5.0.3/dist/tesseract.min.js"></script>
+
+</body>
+</html>
