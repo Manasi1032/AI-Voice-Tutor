@@ -37,7 +37,7 @@ async function handleTextToSpeech() {
     answerDiv.textContent = "Getting answer from AI...";
 
     try {
-        const geminiResp = await fetch("http://localhost:3000/ask-gemini", {
+        const geminiResp = await fetch("/ask-gemini", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question: text })
