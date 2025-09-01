@@ -1,4 +1,3 @@
-// --- EXISTING ELEMENTS ---
 const btn = document.getElementById("ttsBtn");
 const textInput = document.getElementById("textInput");
 const player = document.getElementById("player");
